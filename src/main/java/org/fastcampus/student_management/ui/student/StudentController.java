@@ -6,12 +6,14 @@ import org.fastcampus.student_management.application.student.StudentService;
 import org.fastcampus.student_management.application.student.dto.StudentInfoDto;
 import org.fastcampus.student_management.ui.UserInputType;
 
+// Controller 레이어는 사용자 입력을 받고 Service 에 전달
 public class StudentController {
   private final Scanner scanner = new Scanner(System.in);
   private final StudentPresenter studentPresenter;
   private final StudentService studentService;
 
   public StudentController(StudentPresenter studentPresenter, StudentService studentService) {
+    // StudentPresenter 와 StudentService 를 생성자로 주입받음
     this.studentPresenter = studentPresenter;
     this.studentService = studentService;
   }

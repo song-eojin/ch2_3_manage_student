@@ -1,5 +1,6 @@
 package org.fastcampus.student_management.ui.student;
 
+// Presenter 는 메시지를 출력하는 역할
 public class StudentPresenter {
 
   public void showMenu() {

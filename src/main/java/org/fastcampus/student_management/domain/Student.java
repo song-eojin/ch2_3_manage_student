@@ -2,9 +2,12 @@ package org.fastcampus.student_management.domain;
 
 public class Student {
 
+  // 도메인 객체는 final 필드 + 생성자 강제 → 불변 객체에 가깝게 설계됨
   private final String name;
   private final int age;
   private final String address;
+
+  // activated만 상태 변경을 허용 (활성화/비활성화 용도)
   private boolean activated;
 
   public Student(String name, int age, String address) {

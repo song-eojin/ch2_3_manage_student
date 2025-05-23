@@ -4,6 +4,8 @@ import org.fastcampus.student_management.application.student.dto.StudentInfoDto;
 import org.fastcampus.student_management.domain.Student;
 import org.fastcampus.student_management.repo.StudentRepository;
 
+
+// Service 레이어는 도메인 로직 수행
 public class StudentService {
 
   private final StudentRepository studentRepository;
