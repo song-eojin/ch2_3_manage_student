@@ -7,7 +7,7 @@ public class Student {
   private final int age;
   private final String address;
 
-  // activated만 상태 변경을 허용 (활성화/비활성화 용도)
+  // activated 만 상태 변경을 허용 (활성화/비활성화 용도)
   private boolean activated;
 
   public Student(String name, int age, String address) {
@@ -32,6 +32,21 @@ public class Student {
   public String getAddress() {
     return address;
   }
+
+  // set 메서드 대신 분명한 역할을 갖는 메서드 사용
+  public void activate() {
+    if (this.activated) {
+      throw new IllegalArgumentException();
+    }
+    this.activated = true;
+  }
+  public void deactivate() {
+    if (!this.activated) {
+      throw new IllegalArgumentException();
+    }
+    this.activated = false;
+  }
+
   public boolean isActivate() {
     return activated;
   }

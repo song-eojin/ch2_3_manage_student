@@ -33,8 +33,11 @@ public class Main {
     studentService.saveStudent(studentInfoDto1);
 
     CourseInfoDto courseInfoDto = new CourseInfoDto("바이올린", 200000, "MONDAY", "홍길동", 10L);
-    CourseInfoDto courseInfoDto1 = new CourseInfoDto("바이올린", 200000, "MONDAY", "김시연", 5L);
+    CourseInfoDto courseInfoDto1 = new CourseInfoDto("피아노", 200000, "MONDAY", "김시연", 5L);
     CourseInfoDto courseInfoDto2 = new CourseInfoDto("첼로", 150000, "MONDAY", "김시연", 5L);
+    courseService.registerCourse(courseInfoDto);
+    courseService.registerCourse(courseInfoDto1);
+    courseService.registerCourse(courseInfoDto2);
 
     studentPresenter.showMenu();
     UserInputType userInputType = studentController.getUserInput();
