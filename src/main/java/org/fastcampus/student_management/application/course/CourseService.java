@@ -32,5 +32,12 @@ public class CourseService {
 
   public void changeFee(String studentName, int fee) {
     // TODO: 과제 구현 부분
+    List<Course> courses = courseRepository.getCourseListByStudent(studentName);
+    for (Course course : courses) {
+      if (course.isSameDay(DayOfWeek.SATURDAY) || course.isSameDay(DayOfWeek.SUNDAY)) {
+        course.changeFee((int) (fee * 1.5));
+      }
+      course.changeFee(fee);
+    }
   }
 }
